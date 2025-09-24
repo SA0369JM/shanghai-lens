@@ -31,8 +31,6 @@ def point_in_rect(x, y, rect, inclusive=True, tol=0.0):
         return (left - tol <= x <= right + tol) and (top - tol <= y <= bottom + tol)
     else:
         return (left - tol <  x <  right + tol) and (top - tol <  y <  bottom + tol)
-    
-st.set_page_config(page_title="Poster · Multimedia Container", page_icon="🖼️", layout="wide")
 
 coords = streamlit_image_coordinates("assets/jaws.jpg",width=400)
 if coords:

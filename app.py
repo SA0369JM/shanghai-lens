@@ -5,44 +5,36 @@
 import streamlit as st
 
 st.set_page_config(
-    page_title="COMP4415/5415", #title on  the tab
-    page_icon="🎬", 
+    page_title="Shanghai Lens", #title on the tab
+    page_icon="📷", 
     layout="wide")
 
 with st.sidebar:
-    st.code('''st.image('assets/logo.png')''')
     st.image('assets/logo.png')
+    st.markdown("")
 
 pages = {
-    "Text": [
-        st.Page("pages/4_text.py", title="Text"),
+    "Overview": [
+        st.Page("pages/story.py", title="Story"),
     ],
-    "Layout": [
-        st.Page("pages/Cols.py", title="Columns"),
-        st.Page("pages/Tabs.py", title="Tabs"),
-        st.Page("pages/Container.py", title="Container"),
+    "Shanghai": [
+        st.Page("pages/map.py", title="Map"),
+        st.Page("pages/gallery.py", title="Gallery"),
+        st.Page("pages/shanghai_panorama.py", title="Shanghai Panorama"),
     ],
-    "Images": [
-        st.Page("pages/Poster.py", title="Poster"),
-        st.Page("pages/Story.py", title="Storyboard"),
-        st.Page("pages/Gallery.py", title="Gallery"),
+    "Project": [
+        st.Page("pages/web_design.py", title="Web Design"),
+        st.Page("pages/poster.py", title="Poster"),
         st.Page("pages/banner.py", title="Banner"),
-        st.Page("pages/Image_map.py", title="Image Map"),
+        st.Page("pages/animation.py", title="Animation"),
 
-    ],
-    "Audio": [
-        st.Page("pages/Audio.py", title="Audio"),
-    ],
-    "Videos": [
-        st.Page("pages/2_Video.py", title="Animation"),
-        st.Page("pages/Chapter.py", title="Video Chapter"),
-    ],
-    
+    ]   
 }
 
-po=st.sidebar.selectbox("Navigation Bar", ["top", "sidebar", "hidden"], key="NP")
+# po=st.sidebar.selectbox("Navigation Bar", ["top", "sidebar", "hidden"], key="NP")
 
-pg = st.navigation(pages,position=po)
+# pg = st.navigation(pages,position=po)
+pg = st.navigation(pages,position="top")
 pg.run()
 
 
