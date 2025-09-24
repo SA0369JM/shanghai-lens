@@ -10,7 +10,7 @@ st.set_page_config(
     layout="wide")
 
 with st.sidebar:
-    st.image('assets/logo.png')
+    st.image('assets/logo.png', caption="@Shanghai Lens · Amy Shi")
     st.markdown("")
 
 pages = {
@@ -24,8 +24,8 @@ pages = {
     ],
     "Project": [
         st.Page("pages/web_design.py", title="Web Design"),
-        st.Page("pages/poster.py", title="Poster"),
         st.Page("pages/banner.py", title="Banner"),
+        st.Page("pages/poster.py", title="Poster"),
         st.Page("pages/animation.py", title="Animation"),
 
     ]   
