@@ -36,7 +36,7 @@ st.write('''
          ''')
 
 st.write('''
-         **Project (Design Detail) **
+         **Project (Design Detail)**
          - Page - Banner & Poster: basic concept and meaning of each design
          - Page - Animation: sepreate video and audio resources
          - Goal: Get a deeper understanding of the design process and the multimedia elements used in this project
