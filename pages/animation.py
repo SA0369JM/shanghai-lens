@@ -54,7 +54,10 @@ with tab3:
         {"img": "assets/3D/xiaolongbao.png", "text": "Xiaolongbao"}
     ]
 
-    spacer1, col1, col2, col3, col4, spacer2 = st.columns([0.5, 4, 4, 4, 4, 0.5], gap="large")
+    spacer1, col1, col2, col3, col4, spacer2 = st.columns(
+        [0.5, 4, 4, 4, 4, 0.5],
+        gap="large"
+    )
 
     with col1:
         st.image(scenes[0]["img"], use_container_width=True)
