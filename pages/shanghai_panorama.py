@@ -1,5 +1,5 @@
 import streamlit as st
-# VIDEO_URL = "https://www.w3schools.com/html/mov_bbb.mp4"
+VIDEO_URL = "https://upload.wikimedia.org/wikipedia/commons/c/c4/Muriel-Nguyen-Xuan-Chopin-valse-opus64-1.ogg"
 
 # # Define your chapters (label -> start time in seconds)
 # CHAPTERS = {
@@ -11,7 +11,10 @@ import streamlit as st
 
 st.title("🎬 Shanghai Panorama ")
 
-st.image('assets/comming_soon.png')
+st.header("🎬 Video")
+    c1, c2, c3 = st.columns([1, 2, 1])
+    with c2:
+        st.video(str(VIDEO_URL), start_time=0)
 
 # Keep current chapter time in session state
 st.session_state.setdefault("chapter_time", 0)
@@ -25,3 +28,4 @@ st.session_state.setdefault("chapter_time", 0)
 #                 st.session_state["chapter_time"] = t
 #     st.video(VIDEO_URL, start_time=st.session_state["chapter_time"])
 #     st.caption(f"Current chapter start: {st.session_state['chapter_time']}s")
+
