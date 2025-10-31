@@ -54,21 +54,20 @@ with tab3:
         {"img": "assets/3D/xiaolongbao.png", "text": "Xiaolongbao"},
     ]
 
-    # 中间 4 个图，两边留一点空
-    spacer1, col1, col2, col3, col4, spacer2 = st.columns([0.3, 2, 2, 2, 2, 0.3], gap="large")
-
+    spacer1, col1, col2, spacer2 = st.columns([0.5, 4, 4, 0.5], gap="large")
     with col1:
         st.image(scenes[0]["img"], use_container_width=True)
-        st.caption(scenes[0]["text"])
-
+        st.caption(f"**{scenes[0]['text']}**") 
     with col2:
         st.image(scenes[1]["img"], use_container_width=True)
-        st.caption(scenes[1]["text"])
+        st.caption(f"**{scenes[1]['text']}**")
 
+    st.divider()  
+
+    spacer3, col3, col4, spacer4 = st.columns([0.5, 4, 4, 0.5], gap="large")
     with col3:
         st.image(scenes[2]["img"], use_container_width=True)
-        st.caption(scenes[2]["text"])
-
+        st.caption(f"**{scenes[2]['text']}**")
     with col4:
         st.image(scenes[3]["img"], use_container_width=True)
-        st.caption(scenes[3]["text"])
+        st.caption(f"**{scenes[3]['text']}**")
