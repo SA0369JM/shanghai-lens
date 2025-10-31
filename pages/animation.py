@@ -1,5 +1,7 @@
 import streamlit as st
-# VIDEO_URL = "https://www.w3schools.com/html/mov_bbb.mp4"
+from pathlib import Path
+
+VIDEO_URL = "https://upload.wikimedia.org/wikipedia/commons/c/c4/Muriel-Nguyen-Xuan-Chopin-valse-opus64-1.ogg"
 
 # # Define your chapters (label -> start time in seconds)
 # CHAPTERS = {
@@ -15,7 +17,7 @@ st.title("Animation")
 
 ASSETS = Path("assets")
 
-VIDEO_PATH = ASSETS / "Shanghai_Lens_Moive.mp4"
+# VIDEO_PATH = ASSETS / "Shanghai_Lens_Moive.mp4"
 AUDIO_TRACKS = {
     "Kids Song": ASSETS / "kids_song.mp3", 
     "Gu Feng":   ASSETS / "ancient_song.mp3", 
@@ -27,7 +29,7 @@ with tab1:
     st.header("🎬 Video")
     c1, c2, c3 = st.columns([1, 2, 1])
     with c2:
-        st.video(str(VIDEO_PATH), start_time=0)
+        st.video(str(VIDEO_URL), start_time=0)
     # with st.container(width=800,border=False):
     #     st.video("https://youtu.be/uzumDxZMDwU", loop=True)
         
@@ -60,4 +62,5 @@ with tab3:
 
     with col2:
         st.image(scenes[1]["img"], use_container_width=True)
+
         st.caption(scenes[1]["text"])
