@@ -1,7 +1,7 @@
 import streamlit as st
 from pathlib import Path
 
-VIDEO_URL = "https://upload.wikimedia.org/wikipedia/commons/c/c4/Muriel-Nguyen-Xuan-Chopin-valse-opus64-1.ogg"
+VIDEO_URL = "https://youtu.be/uzumDxZMDwU"
 
 # # Define your chapters (label -> start time in seconds)
 # CHAPTERS = {
@@ -64,3 +64,4 @@ with tab3:
         st.image(scenes[1]["img"], use_container_width=True)
 
         st.caption(scenes[1]["text"])
+
