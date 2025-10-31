@@ -50,8 +50,8 @@ with tab3:
     scenes = [
         {"img": 'assets/3D/oriental_pearl_tower.png', "text": "Oriental Pearl Tower"},  
         {"img": "assets/3D/koala.png", "text": "Koala"},
-        {"img": "assets/3D/Shikumen.png", "text": "Shikumen"},
-        {"img": "assets/3D/Xiaolongbao.png", "text": "Xiaolongbao"}
+        {"img": "assets/3D/shikumen.png", "text": "Shikumen"},
+        {"img": "assets/3D/xiaolongbao.png", "text": "Xiaolongbao"}
     ]
 
     spacer1, col1, col2, col3, col4, spacer2 = st.columns([0.5, 4, 4, 4, 4, 0.5], gap="large")
@@ -71,6 +71,7 @@ with tab3:
     with col4:
         st.image(scenes[3]["img"], use_container_width=True)
         st.caption(scenes[3]["text"])
+
 
 
 
