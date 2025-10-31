@@ -44,20 +44,18 @@ with tab2:
     #     st.audio('https://upload.wikimedia.org/wikipedia/commons/c/c4/Muriel-Nguyen-Xuan-Chopin-valse-opus64-1.ogg',
     #          loop=True)
 
-with tab3:    
+with tab3:
     st.header("🧸 3D Model")
 
     scenes = [
-        {"img": 'assets/3D/oriental_pearl_tower.png', "text": "Oriental Pearl Tower"},  
+        {"img": "assets/3D/oriental_pearl_towel.png", "text": "Oriental Pearl Tower"},
         {"img": "assets/3D/koala.png", "text": "Koala"},
         {"img": "assets/3D/shikumen.png", "text": "Shikumen"},
-        {"img": "assets/3D/xiaolongbao.png", "text": "Xiaolongbao"}
+        {"img": "assets/3D/xiaolongbao.png", "text": "Xiaolongbao"},
     ]
 
-    spacer1, col1, col2, col3, col4, spacer2 = st.columns(
-        [0.5, 4, 4, 4, 4, 0.5],
-        gap="large"
-    )
+    # 中间 4 个图，两边留一点空
+    spacer1, col1, col2, col3, col4, spacer2 = st.columns([0.3, 2, 2, 2, 2, 0.3], gap="large")
 
     with col1:
         st.image(scenes[0]["img"], use_container_width=True)
@@ -74,7 +72,3 @@ with tab3:
     with col4:
         st.image(scenes[3]["img"], use_container_width=True)
         st.caption(scenes[3]["text"])
-
-
-
-
