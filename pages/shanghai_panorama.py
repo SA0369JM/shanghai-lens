@@ -1,5 +1,5 @@
 import streamlit as st
-VIDEO_URL = "https://upload.wikimedia.org/wikipedia/commons/c/c4/Muriel-Nguyen-Xuan-Chopin-valse-opus64-1.ogg"
+VIDEO_URL = "https://youtu.be/uzumDxZMDwU?si=jgTKM8Dqc8k38-Y3"
 
 # # Define your chapters (label -> start time in seconds)
 # CHAPTERS = {
@@ -28,4 +28,5 @@ st.session_state.setdefault("chapter_time", 0)
 #                 st.session_state["chapter_time"] = t
 #     st.video(VIDEO_URL, start_time=st.session_state["chapter_time"])
 #     st.caption(f"Current chapter start: {st.session_state['chapter_time']}s")
+
 
