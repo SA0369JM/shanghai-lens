@@ -37,7 +37,6 @@ with tab2:
     st.header("🔊 Audio")
     choice = st.selectbox("Track", list(AUDIO_TRACKS.keys()), index=0)
     audio_file = AUDIO_TRACKS[choice]
-
     c1, c2, c3 = st.columns([1, 2, 1])
     with c2:
         st.audio(str(audio_file))
@@ -55,13 +54,21 @@ with tab3:
         {"img": "assets/3D/Xiaolongbao.png","text": "Xiaolongbao" }
     ]
 
-    spacer1, col1, col2, spacer2 = st.columns([0.5,4,4,0.5], gap="large")
+    spacer1, col1, col2, col3, col 4, spacer2 = st.columns([0.5,4,4,0.5], gap="large")
     with col1:
         st.image(scenes[0]["img"], use_container_width=True)  
         st.caption(scenes[0]["text"])
 
     with col2:
         st.image(scenes[1]["img"], use_container_width=True)
-
         st.caption(scenes[1]["text"])
+
+    with col3:
+        st.image(scenes[1]["img"], use_container_width=True)
+        st.caption(scenes[1]["text"])
+
+    with col4:
+        st.image(scenes[1]["img"], use_container_width=True)
+        st.caption(scenes[1]["text"])
+
 
